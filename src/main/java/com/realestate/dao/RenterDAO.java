@@ -1,4 +1,4 @@
 package realestate.dao;
 
-public class PaymentDAO {
+public class RenterDAO {
 }

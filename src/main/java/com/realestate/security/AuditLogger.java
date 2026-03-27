@@ -1,4 +1,4 @@
-package com.realestate.util;
+package realestate.security;
 
 public class AuditLogger {
 }

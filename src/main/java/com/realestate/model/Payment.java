@@ -1,4 +1,4 @@
-package com.realestate.model;
+package realestate.model;
 
 public class Payment {
 }

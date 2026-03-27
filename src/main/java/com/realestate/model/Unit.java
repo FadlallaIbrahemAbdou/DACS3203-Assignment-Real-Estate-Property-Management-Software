@@ -1,4 +1,4 @@
 package realestate.model;
 
-public class User {
+public class Unit {
 }

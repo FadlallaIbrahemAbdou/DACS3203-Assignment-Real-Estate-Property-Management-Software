@@ -1,4 +1,4 @@
-package com.realestate.dao;
+package realestate.dao;
 
 public class LeaseDAO {
 }

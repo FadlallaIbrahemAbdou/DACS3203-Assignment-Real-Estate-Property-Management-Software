@@ -1,4 +1,4 @@
 package realestate.service;
 
-public class AuthService {
+public class StaffService {
 }
