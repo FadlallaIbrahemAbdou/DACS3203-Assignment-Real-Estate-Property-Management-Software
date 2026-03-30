@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets.*?>
+
+<VBox spacing="10" prefWidth="750" prefHeight="550"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="realestate.controller.StaffController">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+    <Label text="Staff Management" style="fx-font-size:16; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="fullNameField" promptText="Full Name" prefWidth="150"/>
+        <TextField fx:id="usernameField" promptText="User name" prefWidth="120"/>
+        <TextField fx:id="emailField" promptText="Email" prefWidth="150"/>
+        <passwordField fx:id="passwordField" promptText="Password" prefWidth="120"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Buttton text="Add Staff" onAction="#handleAdd"/>
+        <Buttton text="Update" onAction="#handleUpdate"/>
+        <Buttton text="Deactivate" onAction="#handleDeativate"/>
+
+    </HBox>
+
+    <Label fx:id="MessageLabel" textFill="DARKBLUE"/>
+
+    <TableView fx:id="staffTable" prefHeight="300">
+        <columns>
+            <TableColum fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColum fx:id="colFullName" text="Full Name" prefWidth="150"/>
+            <TableColum fx:id="colUserName" text="Username" prefWidth="120"/>
+            <TableColum fx:id="colEmail" text="Email" prefWidth="180"/>
+            <TableColum fx:id="colStatus" text="Status" prefWidth="90"/>
+
+        </columns>
+    </TableView>
+
+    <Button text="Back to Dashboard" onAction="#handleBack"/>
+
+</VBox>
