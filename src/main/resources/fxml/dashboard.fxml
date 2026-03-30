@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="15" prefWidth="500" prefHeight="400"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="realestate.controller.DashboardController">
+    <padding><Insets top="30" right="40" bottom="30" left="40"/></padding>
+
+    <Label fx:id="welcomeLabel" text="Welcome" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <Button fx:id="staffButton" text="Staff Management" onAction="#openStaff" maxWidth="250"/>
+    <Button text="Property Management" onAction="#openProperties" maxWidth="250"/>
+    <Button text="Renter &amp; Lease Management" onAction="#openRenterLease" maxWidth="250"/>
+    <Button text="Payment Management" onAction="#openPayments" maxWidth="250"/>
+    <Button text="Maintenance Management" onAction="#openMaintenance" maxWidth="250"/>
+
+    <Separator/>
+
+    <Button text="Logout" onAction="#handleLogout"/>
+</VBox>
