@@ -19,7 +19,7 @@ public class LoginController {
     private final AuthService authService = new AuthService();
 
     @FXML
-    private void handlelogin() {
+    private void handleLogin() {
         String username = usernameField.getText().trim();
         String password = passwordField.getText();
 
