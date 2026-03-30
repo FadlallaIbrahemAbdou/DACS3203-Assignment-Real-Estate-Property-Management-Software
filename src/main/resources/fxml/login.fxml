@@ -9,7 +9,7 @@
     <padding><Insets top="30" right="40" bottom="30" left="40"/></padding>
     <Label text="REPMS Login" style="-fx-font-size: 18; -fx-front-weight; bold;"/>
     <TextField fx:id="usernameField" promptText="Username" maxWidth="250"/>
-    <PasswordField fx:id="PASSWORDField" promptText="Password" maxWidth="250"/>
+    <PasswordField fx:id="passwordField" promptText="Password" maxWidth="250"/>
 
     <Label fx:id="errorLabel" textFill="RED"/>
     <Button text="Login" onAction="#handleLogin" defaultButton="true"/>

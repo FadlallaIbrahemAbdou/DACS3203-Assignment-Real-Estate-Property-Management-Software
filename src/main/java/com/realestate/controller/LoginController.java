@@ -14,7 +14,7 @@ public class LoginController {
 
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
-    @FXML private Label errorLable;
+    @FXML private Label errorLabel;
 
     private final AuthService authService = new AuthService();
 
@@ -25,7 +25,7 @@ public class LoginController {
 
         String error = authService.login(username, password);
         if (error != null){
-            errorLable.setText(error);
+            errorLabel.setText(error);
             return;
         }
         try {
@@ -37,7 +37,7 @@ public class LoginController {
             stage.centerOnScreen();
         } catch (Exception e) {
             System.out.println("Error " + e.getMessage());
-            errorLable.setText("Failed to load dashboard");
+            errorLabel.setText("Failed to load dashboard");
         }
     }
 }
