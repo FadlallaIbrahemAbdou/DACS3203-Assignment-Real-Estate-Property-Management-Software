@@ -13,6 +13,7 @@ public class SessionManager {
         return currentUser;
     }
 
+    
     public static void clearSession(){
         currentUser= null;
     }

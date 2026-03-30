@@ -12,7 +12,7 @@ public class LoginAttemptService {
 
     public static boolean isBlocked(String username) {
         Long lockTime = lockTimeCache.get(username);
-        if (lockTime == null) 
+        if (lockTime == null)
             return false;
         if (System.currentTimeMillis() - lockTime > LOCK_TIME_MS) {
             attemptsCache.remove(username);
