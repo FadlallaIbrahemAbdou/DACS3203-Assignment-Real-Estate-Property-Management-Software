@@ -8,7 +8,7 @@ public class Payment {
 
     private int paymentId;
     private int leaseId;
-    private Date paymentData;
+    private Date paymentDate;
     private Date paymentMonth;
     private BigDecimal amount;
     private String paymentMethod;
@@ -19,9 +19,9 @@ public class Payment {
 
     public Payment(){}
 
-    public Payment(int leaseId, Date paymentData, Date paymentMonth, BigDecimal amount, String paymentMethod, String status) {
+    public Payment(int leaseId, Date paymentDate, Date paymentMonth, BigDecimal amount, String paymentMethod, String status) {
         this.leaseId = leaseId;
-        this.paymentData = paymentData;
+        this.paymentDate = paymentDate;
         this.paymentMonth = paymentMonth;
         this.amount = amount;
         this.paymentMethod = paymentMethod;
@@ -44,12 +44,12 @@ public class Payment {
         this.leaseId = leaseId;
     }
 
-    public Date getPaymentData() {
-        return paymentData;
+    public Date getPaymentDate() {
+        return paymentDate;
     }
 
-    public void setPaymentData(Date paymentData) {
-        this.paymentData = paymentData;
+    public void setPaymentDate(Date paymentDate) {
+        this.paymentDate = paymentDate;
     }
 
     public Date getPaymentMonth() {
