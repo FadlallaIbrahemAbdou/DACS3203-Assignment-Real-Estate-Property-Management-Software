@@ -13,11 +13,14 @@ public class Lease {
     private Date endDate;
     private BigDecimal depositAmount;
     private BigDecimal monthlyRent;
+
     private String status;
     private Timestamp createdAt;
 
     private String renterName;
     private String unitNumber;
+
+    public Lease() {};
 
     public Lease(int renterId, int unitId, Date startDate, Date endDate, BigDecimal depositAmount, BigDecimal monthlyRent, String status) {
         this.renterId = renterId;
