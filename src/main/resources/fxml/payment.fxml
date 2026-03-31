@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Insets.*?>
+
+
+<VBox spacing="10" prefWidth="850" prefHeight="550"
+
+      xmlns:fx="http://javafx.com/fxml"
+
+      fx:controller="realestate.controller.PaymentController">
+
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+
+
+    <Label text="Payment Management" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+
+    <HBox spacing="10">
+
+        <VBox spacing="5">
+
+            <Label text="Lease:"/>
+
+            <ComboBox fx:id="leaseCombo" prefWidth="220"/>
+
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="Payment Date:"/>
+            <DataPicker fx:id="paymentDataPicker" prefWidth="140"/>
+        </VBox>
+
+    </HBox>
+
+    <HBox spacing="10">
+        <TextField fx:id="amountField" promptText="Amount" prefWidth="120"/>
+        <ComboBox fx:id="methodCombo" promptText="Method" prefWidth="150"/>
+        <ComboBox fx:id="statusCombo" prefWidth="120"/>
+
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Record Payment" onAction="#handleRecordPayment"/>
+        <Button text="Show All Payments" onAction="#handleShowAll"/>
+    </HBox>
+    <Label fx:id="messageLabel" textFill="DARKBLUE"/>
+
+    <TableView fx:id="paymentTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colPaymentId" text="ID" prefWidth="40"/>
+            <TableColumn fx:id="colLeaseId" text="Lease" prefWidth="50"/>
+            <TableColumn fx:id="colRenter" text="Renter" prefWidth="120"/>
+            <TableColumn fx:id="colPaymentDate" text="Date" prefWidth="90"/>
+            <TableColumn fx:id="colPaymentMonth" text="Month" prefWidth="90"/>
+            <TableColumn fx:id="colAmount" text="Amount" prefWidth="90"/>
+            <TableColumn fx:id="colMethod" text="Method" prefWidth="110"/>
+            <TableColumn fx:id="colStatus" text="Status" prefWidth="80"/>
+        </columns>
+
+    </TableView>
+
+
+    <Button text="Back to Dashboard" onAction="#handleBack"/>
+
+</VBox>
