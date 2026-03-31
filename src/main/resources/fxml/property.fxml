@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.math.BigDecimal?>
+
+<VBox spacing="10" prefWidth="850" prefHeight="650"
+
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="realestate.controller.PropertyController">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+    <Label text="Property Management" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+
+    <!-- Property Section -->
+    <HBox spacing="10">
+        <TextField fx:id="propNameField" promptText="Property Name" prefWidth="150"/>
+        <TextField fx:id="propAddressField" promptText="Address" prefWidth="150"/>
+        <TextField fx:id="propCityField" promptText="City" prefWidth="100"/>
+        <TextField fx:id="propDescField" promptText="Description" prefWidth="150"/>
+    </HBox>
+
+    <HBox spacing="10">
+
+        <Button text="Add Property" onAction="#handleAddProperty"/>
+        <Button text="Update Property" onAction="#handleUpdateProperty"/>
+        <TextField fx:id="propSearchField" promptText="Search..." prefWidth="150"/>
+        <Button text="Search" onAction="#handleSearchProperty"/>
+    </HBox>
+
+    <Label fx:id="propMessageLabel" textFill="DARKBLUE"/>
+
+
+
+    <TableView fx:id="propertyTable" prefHeight="160">
+        <columns>
+            <TableColumn fx:id="colPropId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colPropName" text="Name" prefWidth="160"/>
+            <TableColumn fx:id="colPropAddress" text="Address" prefWidth="200"/>
+            <TableColumn fx:id="colPropCity" text="City" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+
+    <Separator/>
+
+
+    <!-- Units -->
+
+    <Label text="Units (select a property above)" style="-fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <TextField fx:id="unitNumberField" promptText="Unit Number" prefWidth="120"/>
+        <TextField fx:id="unitRentField" promptText="Rent Amount" prefWidth="120"/>
+        <ComboBox fx:id="unitStatusCombo" prefWidth="140"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Add Unit" onAction="#handleAddUnit"/>
+        <Button text="Update Unit" onAction="#handleUpdateUnit"/>
+    </HBox>
+
+    <Label fx:id="unitMessageLabel" textFill="DARKBLUE"/>
+    <TableView fx:id="unitTable" prefHeight="160">
+
+        <columns>
+            <TableColumn fx:id="colUnitID" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colUnitNumber" text="Unit #" prefWidth="120"/>
+            <TableColumn fx:id="colUnitRent" text="Rent" prefWidth="120"/>
+            <TableColumn fx:id="colUnitStatus" text="Status" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+    <Button text="Back to Dashboard" onAction="#handleBack"/>
+
+</VBox>
