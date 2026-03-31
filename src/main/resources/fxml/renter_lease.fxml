@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+<VBox spacing="10" prefWidth="850" prefHeight="700"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="realestate.controller.RenterLeaseController">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+    <Label text="Renter &amp; Lease Management" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <!-- Renter -->
+
+    <Label text="Renters" style="-fx-font-weight: bold;"/>
+    <HBox spacing="10">
+        <TextField fx:id="renterNameField" promptText="Full Name" prefWidth="160"/>
+        <TextField fx:id="renterPhoneField" promptText="Phone" prefWidth="130"/>
+        <TextField fx:id="renterEmailField" promptText="Email" prefWidth="170"/>
+        <Button text="Add Renter" onAction="#handleAddRenter"/>
+        <Button text="Update Renter" onAction="#handleUpdateRenter"/>
+
+    </HBox>
+
+    <Label fx:id="renterMessageLabel" textFill="DARKBLUE"/>
+
+    <TableView fx:id="renterTable" prefHeight="140">
+        <columns>
+            <TableColumn fx:id="colRenterId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colRenterName" text="Name" prefWidth="160"/>
+            <TableColumn fx:id="colRenterPhone" text="Phone" prefWidth="130"/>
+            <TableColumn fx:id="colRenterEmail" text="Email" prefWidth="180"/>
+        </columns>
+
+    </TableView>
+
+
+    <Separator/>
+
+
+    <!-- Lease -->
+    <Label text="Create Lease" style="-fx-font-weight: bold;"/>
+    <HBox spacing="10">
+        <VBox spacing="5">
+            <Label text="Renter:"/>
+            <ComboBox fx:id="leaseRenterCombo" prefWidth="180"/>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="Available Unit:"/>
+            <ComboBox fx:id="leaseUnitCombo" prefWidth="180"/>
+        </VBox>
+
+    </HBox>
+
+    <HBox spacing="10">
+        <VBox spacing="5">
+            <Label text="Start Date:"/>
+            <DatePicker fx:id="leaseStartDate" prefWidth="140"/>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="End Date:"/>
+            <DatePicker fx:id="leaseEndDate" prefWidth="140"/>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="Deposit:"/>
+            <TextField fx:id="leaseDepositField" promptText="0.00" prefWidth="100"/>
+        </VBox>
+        <VBox spacing="5">
+            <Label text="Monthly Rent:"/>
+            <TextField fx:id="leaseRentField" promptText="Rent" prefWidth="100"/>
+        </VBox>
+    </HBox>
+
+    <Button text="Create Lease" onAction="#handleCreateLease"/>
+    <Label fx:id="leaseMessageLabel" textFill="DARKBLUE"/>
+
+    <TableView fx:id="leaseTable" prefHeight="160">
+
+        <columns>
+            <TableColumn fx:id="colLeaseId" text="ID" prefWidth="40"/>
+            <TableColumn fx:id="colLeaseRenter" text="Renter" prefWidth="130"/>
+            <TableColumn fx:id="colLeaseUnit" text="Unit" prefWidth="80"/>
+            <TableColumn fx:id="colLeaseStart" text="Start" prefWidth="90"/>
+            <TableColumn fx:id="colLeaseEnd" text="End" prefWidth="90"/>
+            <TableColumn fx:id="colLeaseRent" text="Rent" prefWidth="90"/>
+            <TableColumn fx:id="colLeaseStatus" text="Status" prefWidth="80"/>
+        </columns>
+
+    </TableView>
+
+    <Button text="Back to Dashboard" onAction="#handleBack"/>
+</VBox>
