@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" prefWidth="900" prefHeight="750"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="realestate.controller.MaintenanceController">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+    <Label text="Maintenance &amp; Contractor Management" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <!-- Contractorr-->
+
+    <Label text="Contractors" style="-fx-font-weight: bold;"/>
+    <HBox spacing="10">
+        <TextField fx:id="contCompanyField" promptText="Company Name" prefWidth="150"/>
+        <TextField fx:id="contContactField" promptText="Contact Person" prefWidth="140"/>
+        <TextField fx:id="contPhoneField" promptText="Phone" prefWidth="120"/>
+        <TextField fx:id="contServiceField" promptText="Service Type" prefWidth="120"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Add Contractor" onAction="#handleAddContractor"/>
+        <Button text="Update Contractor" onAction="#handleUpdateContractor"/>
+    </HBox>
+
+    <Label fx:id="contMessageLabel" textFill="DARKBLUE"/>
+    <TableView fx:id="contractorTable" prefHeight="140">
+
+        <columns>
+            <TableColumn fx:id="colContId" text="ID" prefWidth="40"/>
+            <TableColumn fx:id="colContCompany" text="Company" prefWidth="160"/>
+            <TableColumn fx:id="colContContact" text="Contact" prefWidth="140"/>
+            <TableColumn fx:id="colContPhone" text="Phone" prefWidth="120"/>
+            <TableColumn fx:id="colContService" text="Service" prefWidth="120"/>
+        </columns>
+
+    </TableView>
+
+
+    <Separator/>
+
+
+    <!-- Maintenance Request -->
+
+    <Label text="Maintenance Requests" style="-fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <VBox spacing="5">
+            <Label text="Unit:"/>
+            <ComboBox fx:id="reqUnitCombo" prefWidth="160"/>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="Contractor (optional):"/>
+            <ComboBox fx:id="reqContractorCombo" prefWidth="180"/>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="Priority:"/>
+            <ComboBox fx:id="reqPriorityCombo" prefWidth="110"/>
+        </VBox>
+
+    </HBox>
+
+    <HBox spacing="10">
+
+        <TextField fx:id="reqTitleField" promptText="Title" prefWidth="200"/>
+        <VBox spacing="5">
+            <Label text="Request Date:"/>
+            <DatePicker fx:id="reqDatePicker" prefWidth="140"/>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="Scheduled Date:"/>
+            <DatePicker fx:id="reqScheduledPicker" prefWidth="140"/>
+        </VBox>
+
+    </HBox>
+
+    <TextArea fx:id="reqDescField" promptText="Description" prefHeight="60" prefWidth="600"/>
+
+    <HBox spacing="10">
+        <Button text="Create Request" onAction="#handleCreateRequest"/>
+        <ComboBox fx:id="reqStatusCombo" prefWidth="140"/>
+        <Button text="Update Status" onAction="#handleUpdateStatus"/>
+    </HBox>
+
+    <Label fx:id="reqMessageLabel" textFill="DARKBLUE"/>
+
+
+    <TableView fx:id="requestTable" prefHeight="160">
+        <columns>
+            <TableColumn fx:id="colReqId" text="ID" prefWidth="40"/>
+            <TableColumn fx:id="colReqUnit" text="Unit" prefWidth="80"/>
+            <TableColumn fx:id="colReqTitle" text="Title" prefWidth="150"/>
+            <TableColumn fx:id="colReqPriority" text="Priority" prefWidth="80"/>
+            <TableColumn fx:id="colReqStatus" text="Status" prefWidth="100"/>
+            <TableColumn fx:id="colReqDate" text="Date" prefWidth="90"/>
+            <TableColumn fx:id="colReqContractor" text="Contractor" prefWidth="130"/>
+        </columns>
+    </TableView>
+
+    <Button text="Back to Dashboard" onAction="#handleBack"/>
+</VBox>
