@@ -7,7 +7,7 @@
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="realestate.controller.LoginController">
     <padding><Insets top="30" right="40" bottom="30" left="40"/></padding>
-    <Label text="REPMS Login" style="-fx-font-size: 18; -fx-front-weight; bold;"/>
+    <Label text="REPMS Login" style="-fx-font-size: 18; -fx-front-weight: bold;"/>
     <TextField fx:id="usernameField" promptText="Username" maxWidth="250"/>
     <PasswordField fx:id="passwordField" promptText="Password" maxWidth="250"/>
 
