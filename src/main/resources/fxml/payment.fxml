@@ -2,7 +2,7 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.Insets.*?>
+<?import javafx.geometry.Insets?>
 
 
 <VBox spacing="10" prefWidth="850" prefHeight="550"
@@ -29,7 +29,12 @@
 
         <VBox spacing="5">
             <Label text="Payment Date:"/>
-            <DataPicker fx:id="paymentDataPicker" prefWidth="140"/>
+            <DatePicker fx:id="paymentDatePicker" prefWidth="140"/>
+        </VBox>
+
+        <VBox spacing="5">
+            <Label text="Payment Month:"/>
+            <DatePicker fx:id="paymentMonthPicker" prefWidth="140"/>
         </VBox>
 
     </HBox>
