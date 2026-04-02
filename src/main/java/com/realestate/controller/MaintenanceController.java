@@ -160,8 +160,8 @@ public class MaintenanceController {
                 unit.getUnitId(),
                 cont != null ? cont.getContractorId() : null,
                 reqTitleField.getText().trim(),
-                reqDescField.getText().trim(),
                 reqPriorityCombo.getValue(),
+                reqDescField.getText().trim(),
                 "OPEN",
                 Date.valueOf(reqDate),
                 sched != null ? Date.valueOf(sched) : null
